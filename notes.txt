@@ -1,0 +1,18 @@
+Week 1-8 are done in files as week1- week8.
+
+Week 8-11 is done in GUI_application folder.
+
+The task for week8-11 is as following;
+
+    Design and develop GUI application to manage information of water supply to all
+    houses within a city. This application must fulfill the requirements below.
+    1) The application should allow to add information about pipes that are laid down from
+    source to houses and house to other houses
+    2) Application should store information about different houses.
+    3) Application should allow to view network of water pipes from between point A to point
+    B
+    4) Application should also display shortest distance between any two houses
+    5) Application should display vulnerable points and affected households in case of any
+    breakage within network of pipes connected to supply water.
+    6) The application will allow to detect cycle and should propose optimal network without
+    any cycle so that pipes can be installed between houses without forming any loop.
