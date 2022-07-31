@@ -1,14 +1,31 @@
+/* Question :(week 1) 
+You are provided with kth linked list. Write an algorithm to find median of merged linked
+list in sorter order.
+input: list 1= [2,4,7,5,10]
+list2 = [3,2,7,9]
+list3 = [12,5,6,9]
+output: 5
+Explanation:
+after merging above kth linked list i.e three list in sorted order linked list become,
+[2,2,3,4,5,5,6,7,7,9,9,10] */
+
+// Solution:
+
 import java.util.*;
 
 public class week1 {
+
+    // First create queue for all input values
     Queue<Integer> list;
     int totalSize;
 
     week1(LinkedList[] a) {
 
         // int size = a.length;
+        // whole is total sum of sub-linkedlist 
         int whole = 0;
 
+        // Loop through all sub-linkedlist
         for (int i = 0; i < a.length; i++) {
 
             whole += a[i].size();
@@ -16,10 +33,13 @@ public class week1 {
         }
 
         totalSize = whole;
+        // Create priority queue for all input values
 
         list = new PriorityQueue<Integer>(whole);
 
         LinkedList current;
+        // Most priority queue
+        // loop through linkedlist to add data
 
         for (int i = 0; i < a.length; i++) {
 
@@ -29,7 +49,7 @@ public class week1 {
 
             while (internalItterator < current.size()) {
 
-                // System.out.println(current.get(0));
+                
                 int adder = (Integer) current.get(0);
                 list.add(adder);
                 current.removeFirst();
@@ -39,6 +59,8 @@ public class week1 {
         }
 
     }
+    // method to return value
+    // sorting in array form
 
     int[] queueItterator() {
 
@@ -83,6 +105,7 @@ public class week1 {
 
         int[] requiredArr = medianFinder.queueItterator();
 
+    //    formula for median is (n+1)/2
         int median = (requiredArr.length + 1) / 2;
 
         System.out.println(requiredArr.length);
