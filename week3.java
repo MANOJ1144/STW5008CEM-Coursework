@@ -1,3 +1,16 @@
+/* Question: (week 3)
+you are provided coordinates of houses in 2D map and write an algorithm that will print
+optimal path to construct a road connecting all houses with minimum cost. cost between
+two coordinates is the Manhattan distance between them.
+Input: [{0,0}, {2,2}, {3,10}, {4,4}, {5,2}, {7,0}]
+Output: {0,0} to {2,2}
+ {2,2} to {3,10}
+{2,2} to {4,4}
+ {4,4} to {5,2}
+{5,2} to {0,7}
+ Minimum cost: 24 */ 
+
+// Solution:
 import java.util.Arrays;
 import java.lang.*;
  class Week3 {
