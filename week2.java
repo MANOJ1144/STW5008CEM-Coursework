@@ -214,7 +214,7 @@ int realArrLen;
 
         int[] input = { 10, 10, 5, 0, 2, 1, 2, 5 };
 
-        Week2 sub = new Week2(3, input);
+        week2 sub = new week2(3, input);
         sub.resultFinder();
     }
 
